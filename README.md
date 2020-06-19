@@ -38,6 +38,22 @@ Suppose that you have an n-story building and plenty of eggs. Suppose also that 
 
 Write out your proposed algorithm in plain English or pseudocode AND give the runtime complexity of your solution.
 
+"""
+function takes two parameters n and f
+n being the number of floors
+f being the minimum floor that will break the egg
+
+n must be greater than zero as a building has atleast 1 floor 
+f must be smaller than n and greater than zero
+
+dropping an egg off of each floor from the bottom to n would be inneficient and waste many eggs
+rather its a better idea to treat it like a binary search and drop an egg from half of n or n/2
+and then drop an egg from (n/2)/2 if the egg is broken from the first drop or (n/2) + ((n/2)/2) if it isn't broken
+and so on so fourth until f is found.
+
+This would yeild a time complexity of O(log n)
+"""
+
 ### Code Challenges
 
 #### 3. Use recursion to complete the `count_th()` function _(3 points)_
